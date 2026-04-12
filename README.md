@@ -1,0 +1,1 @@
+# wizzify-privacy
