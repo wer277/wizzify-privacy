@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polityka Prywatności - Wizzify</title>
+    <title>Polityka Prywatności / Privacy Policy - Wizzify</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -16,70 +16,408 @@
         }
         h1 { color: #6C3FC5; }
         h2 { color: #555; margin-top: 30px; }
+        h3 { color: #666; margin-top: 20px; }
         .date { color: #888; font-size: 14px; }
+        .highlight { background: #f0ebfa; padding: 12px 16px; border-left: 4px solid #6C3FC5; margin: 16px 0; border-radius: 4px; }
+        ul { padding-left: 24px; }
+        li { margin-bottom: 6px; }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            margin-left: 8px;
+            border: 2px solid #6C3FC5;
+            border-radius: 24px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .lang-btn.active {
+            background: #6C3FC5;
+            color: #fff;
+        }
+        .lang-btn:not(.active) {
+            background: #fff;
+            color: #6C3FC5;
+        }
+        .lang-btn:hover:not(.active) {
+            background: #f0ebfa;
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
     </style>
 </head>
 <body>
+
+    <div class="lang-switch">
+        <span class="lang-btn active" onclick="switchLang('pl')" id="btn-pl">PL Polski</span>
+        <span class="lang-btn" onclick="switchLang('en')" id="btn-en">EN English</span>
+    </div>
+
+    <!-- ==================== POLISH VERSION ==================== -->
+    <div id="lang-pl" class="lang-section active">
+
     <h1>Polityka Prywatności - Wizzify</h1>
-    <p class="date">Data wejścia w życie: 12 kwietnia 2026</p>
+    <p class="date">Data wejścia w życie: 12 kwietnia 2026 | Ostatnia aktualizacja: 10 maja 2026</p>
 
     <h2>1. Informacje ogólne</h2>
     <p>Wizzify ("Aplikacja") to aplikacja edukacyjna umożliwiająca naukę za pomocą fiszek, quizów i gier. Niniejsza Polityka Prywatności opisuje, jakie dane zbieramy, jak je wykorzystujemy i chronimy.</p>
+    <p>Korzystając z Aplikacji, użytkownik akceptuje zasady opisane w niniejszej Polityce Prywatności. Jeśli użytkownik nie zgadza się z jej postanowieniami, nie powinien korzystać z Aplikacji.</p>
 
     <h2>2. Administrator danych</h2>
     <p>Administratorem danych osobowych jest twórca aplikacji Wizzify. W razie pytań dotyczących prywatności prosimy o kontakt pod adresem: <strong>codecraftmobileapp@gmail.com</strong></p>
 
     <h2>3. Jakie dane zbieramy</h2>
+
+    <h3>3.1. Dane podawane przez użytkownika</h3>
     <ul>
-        <li><strong>Dane konta:</strong> imię, adres e-mail, hasło (zaszyfrowane) - podawane podczas rejestracji.</li>
+        <li><strong>Dane konta:</strong> imię (lub pseudonim), adres e-mail, hasło (przechowywane wyłącznie w formie zaszyfrowanej) - podawane podczas rejestracji.</li>
         <li><strong>Dane logowania przez Google:</strong> imię, adres e-mail, zdjęcie profilowe - pobierane z konta Google za zgodą użytkownika.</li>
+        <li><strong>Treści edukacyjne:</strong> zestawy fiszek, notatki i materiały tworzone przez użytkownika.</li>
+    </ul>
+
+    <h3>3.2. Dane zbierane automatycznie</h3>
+    <ul>
         <li><strong>Dane o postępach:</strong> wyniki nauki, ukończone sesje, statystyki - przechowywane w celu śledzenia postępów.</li>
-        <li><strong>Zdjęcia z kamery:</strong> aplikacja może używać kamery do skanowania fiszek. Zdjęcia są przetwarzane i nie są przechowywane na serwerze.</li>
-        <li><strong>Dane analityczne:</strong> anonimowe dane o korzystaniu z aplikacji (Firebase Analytics) w celu ulepszania usługi.</li>
+        <li><strong>Dane analityczne:</strong> anonimowe dane o korzystaniu z aplikacji (Firebase Analytics), takie jak częstotliwość korzystania, używane funkcje i ogólne wzorce użytkowania.</li>
+        <li><strong>Dane o połączeniu:</strong> informacja o statusie połączenia internetowego (online/offline) w celu zapewnienia trybu offline.</li>
+    </ul>
+
+    <h3>3.3. Dane multimedialne</h3>
+    <ul>
+        <li><strong>Zdjęcia z kamery i galerii:</strong> aplikacja może używać kamery lub galerii zdjęć do skanowania materiałów edukacyjnych (np. podręczników, notatek). Zdjęcia są przetwarzane w celu rozpoznania tekstu (OCR) na urządzeniu użytkownika, a następnie rozpoznany tekst może być przesyłany do usług AI w celu generowania fiszek (patrz sekcja 5). Oryginalne zdjęcia nie są przechowywane na naszych serwerach.</li>
     </ul>
 
     <h2>4. Cel przetwarzania danych</h2>
     <ul>
-        <li>Umożliwienie rejestracji i logowania</li>
-        <li>Śledzenie postępów w nauce</li>
-        <li>Udostępnianie zestawów fiszek między użytkownikami (rodzic-dziecko)</li>
+        <li>Umożliwienie rejestracji, logowania i zarządzania kontem</li>
+        <li>Śledzenie postępów w nauce i prezentowanie statystyk</li>
+        <li>Udostępnianie zestawów fiszek między powiązanymi kontami</li>
+        <li>Generowanie treści edukacyjnych z pomocą sztucznej inteligencji</li>
         <li>Poprawa jakości aplikacji na podstawie anonimowych statystyk</li>
+        <li>Obsługa zakupów w aplikacji i zarządzanie subskrypcjami</li>
+        <li>Zapewnienie działania aplikacji w trybie offline</li>
     </ul>
 
-    <h2>5. Przechowywanie danych</h2>
-    <p>Dane są przechowywane w usłudze Google Firebase (Firestore, Firebase Authentication) na serwerach Google, zgodnie z polityką bezpieczeństwa Google Cloud. Dane są szyfrowane podczas przesyłania (TLS) i w spoczynku.</p>
+    <h2>5. Przetwarzanie danych przez sztuczną inteligencję (AI)</h2>
+    <div class="highlight">
+        <p>Aplikacja wykorzystuje modele sztucznej inteligencji do automatycznego generowania fiszek na podstawie tekstu dostarczonego przez użytkownika (np. zeskanowanego ze zdjęcia lub wklejonego ręcznie).</p>
+    </div>
 
-    <h2>6. Udostępnianie danych</h2>
+    <h3>5.1. Wykorzystywane usługi AI</h3>
+    <ul>
+        <li><strong>Google Gemini API</strong> (dostawca podstawowy) - modele językowe Google do analizy tekstu i generowania treści edukacyjnych. Dane przetwarzane zgodnie z <a href="https://ai.google.dev/terms" target="_blank">Warunkami korzystania z Google AI</a>.</li>
+        <li><strong>SiliconFlow API</strong> (dostawca zapasowy) - wykorzystywany wyłącznie w przypadku niedostępności usługi podstawowej. Obsługuje modele open-source (Gemma, Qwen). Dane przetwarzane zgodnie z <a href="https://siliconflow.com/terms" target="_blank">Warunkami korzystania SiliconFlow</a>.</li>
+    </ul>
+
+    <h3>5.2. Jakie dane są przesyłane do AI</h3>
+    <ul>
+        <li>Wyłącznie tekst rozpoznany ze zdjęć (OCR) lub tekst wklejony przez użytkownika</li>
+        <li>Tekst jest przesyłany przez szyfrowane połączenie (HTTPS/TLS) do usługi Firebase Cloud Functions, która komunikuje się z dostawcami AI</li>
+        <li>Nie przesyłamy danych osobowych użytkownika (imię, e-mail, itp.) do dostawców AI</li>
+        <li>Przesłany tekst nie jest przez nas przechowywany po przetworzeniu - służy wyłącznie do jednorazowego wygenerowania fiszek</li>
+    </ul>
+
+    <h3>5.3. Ważne informacje</h3>
+    <ul>
+        <li>Treści generowane przez AI mają charakter wyłącznie edukacyjny i mogą zawierać błędy</li>
+        <li>Użytkownik powinien weryfikować poprawność wygenerowanych treści</li>
+        <li>Administrator nie ponosi odpowiedzialności za treści wygenerowane przez modele AI</li>
+    </ul>
+
+    <h2>6. Przechowywanie danych</h2>
+
+    <h3>6.1. Przechowywanie w chmurze</h3>
+    <p>Dane są przechowywane w usłudze Google Firebase (Firestore, Firebase Authentication) na serwerach Google w Unii Europejskiej lub Stanach Zjednoczonych, zgodnie z polityką bezpieczeństwa Google Cloud. Dane są szyfrowane podczas przesyłania (TLS) i w spoczynku.</p>
+
+    <h3>6.2. Przechowywanie lokalne</h3>
+    <p>Aplikacja przechowuje na urządzeniu użytkownika lokalną kopię danych (cache) w celu umożliwienia pracy w trybie offline. Dane te obejmują zestawy fiszek, postępy nauki i preferencje użytkownika. Użytkownik może usunąć dane lokalne poprzez wyczyszczenie danych aplikacji w ustawieniach urządzenia.</p>
+
+    <h3>6.3. Okres przechowywania</h3>
+    <ul>
+        <li>Dane konta: przechowywane do momentu usunięcia konta przez użytkownika</li>
+        <li>Dane analityczne: przechowywane przez okres do 14 miesięcy (zgodnie z polityką Google Analytics)</li>
+        <li>Dane lokalne (cache): do momentu wyczyszczenia przez użytkownika lub odinstalowania aplikacji</li>
+    </ul>
+
+    <h2>7. Udostępnianie danych</h2>
     <p>Nie sprzedajemy, nie wynajmujemy ani nie udostępniamy danych osobowych użytkowników podmiotom trzecim w celach marketingowych. Dane mogą być udostępniane wyłącznie:</p>
     <ul>
-        <li>Google Firebase - w celu świadczenia usługi (przechowywanie, autoryzacja)</li>
-        <li>Google Analytics - anonimowe dane analityczne</li>
-        <li>Na żądanie organów ścigania - zgodnie z obowiązującym prawem</li>
+        <li><strong>Google Firebase</strong> - przechowywanie danych, autoryzacja, analityka</li>
+        <li><strong>Google Gemini API</strong> - przetwarzanie tekstu w celu generowania fiszek (tylko tekst edukacyjny, bez danych osobowych)</li>
+        <li><strong>SiliconFlow API</strong> - zapasowe przetwarzanie tekstu (tylko tekst edukacyjny, bez danych osobowych)</li>
+        <li><strong>Google Play Billing</strong> - obsługa zakupów w aplikacji (dane transakcji przetwarzane przez Google)</li>
+        <li><strong>Organy ścigania</strong> - wyłącznie na podstawie obowiązującego prawa i prawomocnych orzeczeń</li>
     </ul>
 
-    <h2>7. Prawa użytkownika</h2>
-    <p>Zgodnie z RODO, użytkownik ma prawo do:</p>
+    <h2>8. Prawa użytkownika</h2>
+    <p>Zgodnie z Rozporządzeniem RODO (UE 2016/679), użytkownik ma prawo do:</p>
     <ul>
-        <li>Dostępu do swoich danych</li>
-        <li>Sprostowania danych</li>
-        <li>Usunięcia danych (prawo do bycia zapomnianym)</li>
-        <li>Ograniczenia przetwarzania</li>
-        <li>Przenoszenia danych</li>
-        <li>Sprzeciwu wobec przetwarzania</li>
+        <li><strong>Dostępu</strong> do swoich danych osobowych</li>
+        <li><strong>Sprostowania</strong> nieprawidłowych danych</li>
+        <li><strong>Usunięcia</strong> danych (prawo do bycia zapomnianym)</li>
+        <li><strong>Ograniczenia</strong> przetwarzania</li>
+        <li><strong>Przenoszenia</strong> danych do innego administratora</li>
+        <li><strong>Sprzeciwu</strong> wobec przetwarzania</li>
+        <li><strong>Wycofania zgody</strong> w dowolnym momencie (bez wpływu na zgodność z prawem przetwarzania przed wycofaniem)</li>
     </ul>
-    <p>W celu realizacji tych praw prosimy o kontakt: <strong>codecraftmobileapp@gmail.com</strong></p>
+    <p>W celu realizacji powyższych praw prosimy o kontakt: <strong>codecraftmobileapp@gmail.com</strong>. Odpowiedź zostanie udzielona w ciągu 30 dni od otrzymania żądania.</p>
+    <p>Użytkownik ma również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (PUODO).</p>
 
-    <h2>8. Dane dzieci</h2>
-    <p>Aplikacja może być używana przez dzieci pod nadzorem rodzica/opiekuna. Konta dzieci są tworzone i zarządzane przez rodzica. Nie zbieramy świadomie danych od dzieci poniżej 13 roku życia bez zgody rodzica.</p>
+    <h2>9. Dane dzieci</h2>
+    <p>Aplikacja może być używana przez dzieci pod nadzorem rodzica lub opiekuna prawnego. Konta dla dzieci są tworzone i zarządzane wyłącznie przez rodzica/opiekuna. Nie zbieramy świadomie danych od dzieci poniżej 16 roku życia (zgodnie z RODO) bez zgody rodzica lub opiekuna prawnego.</p>
+    <p>Jeśli dowiemy się, że zebraliśmy dane dziecka poniżej 16 roku życia bez odpowiedniej zgody, niezwłocznie je usuniemy. W przypadku podejrzenia takiej sytuacji prosimy o kontakt: <strong>codecraftmobileapp@gmail.com</strong></p>
 
-    <h2>9. Bezpieczeństwo</h2>
-    <p>Stosujemy odpowiednie środki techniczne i organizacyjne w celu ochrony danych osobowych, w tym szyfrowanie, kontrolę dostępu i regularne przeglądy bezpieczeństwa.</p>
+    <h2>10. Zakupy w aplikacji</h2>
+    <p>Aplikacja oferuje zakupy w aplikacji (subskrypcje Premium) obsługiwane przez Google Play Billing. Dane transakcji (takie jak identyfikator zakupu i status subskrypcji) są przetwarzane przez Google zgodnie z <a href="https://policies.google.com/privacy" target="_blank">Polityką Prywatności Google</a>. Nie mamy dostępu do danych karty płatniczej ani konta bankowego użytkownika.</p>
 
-    <h2>10. Zmiany w polityce</h2>
-    <p>Zastrzegamy sobie prawo do zmiany niniejszej Polityki Prywatności. O istotnych zmianach poinformujemy użytkowników poprzez aplikację.</p>
+    <h2>11. Bezpieczeństwo</h2>
+    <p>Stosujemy odpowiednie środki techniczne i organizacyjne w celu ochrony danych osobowych, w tym:</p>
+    <ul>
+        <li>Szyfrowanie danych w transmisji (TLS/HTTPS)</li>
+        <li>Szyfrowanie danych w spoczynku (Firebase)</li>
+        <li>Uwierzytelnianie użytkowników (Firebase Authentication)</li>
+        <li>Reguły bezpieczeństwa Firestore ograniczające dostęp do danych</li>
+        <li>Klucze API przechowywane w bezpiecznym menedżerze sekretów (nie w kodzie aplikacji)</li>
+    </ul>
+    <p>Pomimo stosowania odpowiednich zabezpieczeń, żadna metoda transmisji ani przechowywania danych nie jest w 100% bezpieczna. Nie możemy zagwarantować absolutnego bezpieczeństwa danych.</p>
 
-    <h2>11. Kontakt</h2>
-    <p>W razie pytań dotyczących niniejszej Polityki Prywatności prosimy o kontakt:</p>
+    <h2>12. Ograniczenie odpowiedzialności</h2>
+    <div class="highlight">
+        <p><strong>Aplikacja jest udostępniana w stanie "tak jak jest" (as is), bez jakichkolwiek gwarancji, wyraźnych ani dorozumianych.</strong></p>
+    </div>
+    <ul>
+        <li>Administrator nie ponosi odpowiedzialności za jakiekolwiek szkody bezpośrednie, pośrednie, przypadkowe, szczególne lub wynikowe powstałe w związku z korzystaniem lub niemożnością korzystania z Aplikacji.</li>
+        <li>Administrator nie gwarantuje nieprzerwanego ani bezbłędnego działania Aplikacji i zastrzega sobie prawo do czasowego zawieszenia dostępności usługi w celach konserwacyjnych lub aktualizacyjnych.</li>
+        <li>Administrator nie ponosi odpowiedzialności za treści generowane przez modele sztucznej inteligencji. Treści te mają charakter wyłącznie pomocniczy i edukacyjny.</li>
+        <li>Administrator nie ponosi odpowiedzialności za treści tworzone i udostępniane przez użytkowników w ramach Aplikacji.</li>
+        <li>Użytkownik korzysta z Aplikacji na własne ryzyko i odpowiedzialność.</li>
+        <li>Całkowita odpowiedzialność Administratora wobec użytkownika, niezależnie od podstawy prawnej, jest ograniczona do kwoty faktycznie zapłaconej przez użytkownika za korzystanie z Aplikacji w okresie 12 miesięcy poprzedzających zdarzenie.</li>
+    </ul>
+
+    <h2>13. Wyłączenie gwarancji</h2>
+    <p>Administrator nie udziela żadnych gwarancji, wyraźnych ani dorozumianych, w tym między innymi:</p>
+    <ul>
+        <li>Gwarancji przydatności do określonego celu</li>
+        <li>Gwarancji poprawności, kompletności lub aktualności treści edukacyjnych (w tym generowanych przez AI)</li>
+        <li>Gwarancji nieprzerwanej dostępności usługi</li>
+        <li>Gwarancji kompatybilności ze wszystkimi urządzeniami</li>
+    </ul>
+
+    <h2>14. Dostępność usługi</h2>
+    <p>Administrator zastrzega sobie prawo do:</p>
+    <ul>
+        <li>Modyfikowania, zawieszania lub zakończenia działania Aplikacji (lub jej części) w dowolnym momencie, z powiadomieniem lub bez powiadomienia</li>
+        <li>Wprowadzania zmian w funkcjonalnościach, interfejsie i oferowanych usługach</li>
+        <li>Ograniczenia dostępu do wybranych funkcji w ramach modelu freemium</li>
+    </ul>
+    <p>W przypadku trwałego zakończenia działania Aplikacji, użytkownicy zostaną powiadomieni z co najmniej 30-dniowym wyprzedzeniem i uzyskają możliwość eksportu swoich danych.</p>
+
+    <h2>15. Własność intelektualna</h2>
+    <p>Wszelkie prawa własności intelektualnej do Aplikacji (kod źródłowy, projekt graficzny, logo, nazwa "Wizzify") należą do Administratora. Użytkownik zachowuje prawa do treści, które sam tworzy w Aplikacji (zestawy fiszek, notatki).</p>
+
+    <h2>16. Prawo właściwe i jurysdykcja</h2>
+    <p>Niniejsza Polityka Prywatności podlega prawu polskiemu. Wszelkie spory wynikające z korzystania z Aplikacji będą rozstrzygane przez sąd właściwy dla siedziby Administratora, z zastrzeżeniem bezwzględnie obowiązujących przepisów o ochronie konsumentów.</p>
+
+    <h2>17. Zmiany w polityce</h2>
+    <p>Zastrzegamy sobie prawo do zmiany niniejszej Polityki Prywatności w dowolnym momencie. O istotnych zmianach poinformujemy użytkowników poprzez aplikację lub pocztą elektroniczną. Dalsze korzystanie z Aplikacji po wprowadzeniu zmian oznacza akceptację zaktualizowanej Polityki Prywatności.</p>
+
+    <h2>18. Kontakt</h2>
+    <p>W razie pytań dotyczących niniejszej Polityki Prywatności, ochrony danych osobowych lub korzystania z Aplikacji prosimy o kontakt:</p>
     <p><strong>E-mail:</strong> codecraftmobileapp@gmail.com</p>
+
+    </div>
+
+    <!-- ==================== ENGLISH VERSION ==================== -->
+    <div id="lang-en" class="lang-section">
+
+    <h1>Privacy Policy - Wizzify</h1>
+    <p class="date">Effective date: April 12, 2026 | Last updated: May 10, 2026</p>
+
+    <h2>1. General Information</h2>
+    <p>Wizzify (the "App") is an educational application that enables learning through flashcards, quizzes, and games. This Privacy Policy describes what data we collect, how we use it, and how we protect it.</p>
+    <p>By using the App, you accept the terms described in this Privacy Policy. If you do not agree with its provisions, you should not use the App.</p>
+
+    <h2>2. Data Controller</h2>
+    <p>The data controller is the creator of the Wizzify application. For any privacy-related questions, please contact us at: <strong>codecraftmobileapp@gmail.com</strong></p>
+
+    <h2>3. What Data We Collect</h2>
+
+    <h3>3.1. Data Provided by the User</h3>
+    <ul>
+        <li><strong>Account data:</strong> name (or nickname), email address, password (stored only in encrypted form) - provided during registration.</li>
+        <li><strong>Google Sign-In data:</strong> name, email address, profile picture - retrieved from your Google account with your consent.</li>
+        <li><strong>Educational content:</strong> flashcard sets, notes, and materials created by the user.</li>
+    </ul>
+
+    <h3>3.2. Automatically Collected Data</h3>
+    <ul>
+        <li><strong>Learning progress:</strong> quiz results, completed sessions, statistics - stored to track learning progress.</li>
+        <li><strong>Analytics data:</strong> anonymous usage data (Firebase Analytics), such as usage frequency, features used, and general usage patterns.</li>
+        <li><strong>Connection data:</strong> internet connection status (online/offline) to support offline mode.</li>
+    </ul>
+
+    <h3>3.3. Media Data</h3>
+    <ul>
+        <li><strong>Camera and gallery photos:</strong> the App may use the camera or photo gallery to scan educational materials (e.g., textbooks, notes). Photos are processed for text recognition (OCR) on the user's device, and the recognized text may then be sent to AI services for flashcard generation (see Section 5). Original photos are not stored on our servers.</li>
+    </ul>
+
+    <h2>4. Purpose of Data Processing</h2>
+    <ul>
+        <li>Enabling registration, login, and account management</li>
+        <li>Tracking learning progress and presenting statistics</li>
+        <li>Sharing flashcard sets between linked accounts</li>
+        <li>Generating educational content using artificial intelligence</li>
+        <li>Improving App quality based on anonymous statistics</li>
+        <li>Processing in-app purchases and managing subscriptions</li>
+        <li>Enabling offline mode functionality</li>
+    </ul>
+
+    <h2>5. AI Data Processing</h2>
+    <div class="highlight">
+        <p>The App uses artificial intelligence models to automatically generate flashcards based on text provided by the user (e.g., scanned from a photo or pasted manually).</p>
+    </div>
+
+    <h3>5.1. AI Services Used</h3>
+    <ul>
+        <li><strong>Google Gemini API</strong> (primary provider) - Google's language models for text analysis and educational content generation. Data processed in accordance with <a href="https://ai.google.dev/terms" target="_blank">Google AI Terms of Service</a>.</li>
+        <li><strong>SiliconFlow API</strong> (fallback provider) - used only when the primary service is unavailable. Supports open-source models (Gemma, Qwen). Data processed in accordance with <a href="https://siliconflow.com/terms" target="_blank">SiliconFlow Terms of Service</a>.</li>
+    </ul>
+
+    <h3>5.2. What Data Is Sent to AI</h3>
+    <ul>
+        <li>Only text recognized from photos (OCR) or text pasted by the user</li>
+        <li>Text is transmitted via encrypted connection (HTTPS/TLS) to Firebase Cloud Functions, which communicates with AI providers</li>
+        <li>We do not send any personal user data (name, email, etc.) to AI providers</li>
+        <li>Submitted text is not stored by us after processing - it is used solely for one-time flashcard generation</li>
+    </ul>
+
+    <h3>5.3. Important Information</h3>
+    <ul>
+        <li>AI-generated content is for educational purposes only and may contain errors</li>
+        <li>Users should verify the accuracy of generated content</li>
+        <li>The developer is not responsible for content generated by AI models</li>
+    </ul>
+
+    <h2>6. Data Storage</h2>
+
+    <h3>6.1. Cloud Storage</h3>
+    <p>Data is stored using Google Firebase (Firestore, Firebase Authentication) on Google servers in the European Union or the United States, in accordance with Google Cloud security policies. Data is encrypted in transit (TLS) and at rest.</p>
+
+    <h3>6.2. Local Storage</h3>
+    <p>The App stores a local copy of data (cache) on the user's device to enable offline functionality. This includes flashcard sets, learning progress, and user preferences. Users can delete local data by clearing the App's data in device settings.</p>
+
+    <h3>6.3. Retention Period</h3>
+    <ul>
+        <li>Account data: retained until the user deletes their account</li>
+        <li>Analytics data: retained for up to 14 months (per Google Analytics policy)</li>
+        <li>Local data (cache): until cleared by the user or app uninstallation</li>
+    </ul>
+
+    <h2>7. Data Sharing</h2>
+    <p>We do not sell, rent, or share users' personal data with third parties for marketing purposes. Data may be shared only with:</p>
+    <ul>
+        <li><strong>Google Firebase</strong> - data storage, authentication, analytics</li>
+        <li><strong>Google Gemini API</strong> - text processing for flashcard generation (educational text only, no personal data)</li>
+        <li><strong>SiliconFlow API</strong> - fallback text processing (educational text only, no personal data)</li>
+        <li><strong>Google Play Billing</strong> - in-app purchase processing (transaction data handled by Google)</li>
+        <li><strong>Law enforcement</strong> - only as required by applicable law and valid court orders</li>
+    </ul>
+
+    <h2>8. User Rights</h2>
+    <p>Under the General Data Protection Regulation (GDPR, EU 2016/679), you have the right to:</p>
+    <ul>
+        <li><strong>Access</strong> your personal data</li>
+        <li><strong>Rectify</strong> inaccurate data</li>
+        <li><strong>Erase</strong> your data (right to be forgotten)</li>
+        <li><strong>Restrict</strong> processing</li>
+        <li><strong>Data portability</strong> to another controller</li>
+        <li><strong>Object</strong> to processing</li>
+        <li><strong>Withdraw consent</strong> at any time (without affecting the lawfulness of processing before withdrawal)</li>
+    </ul>
+    <p>To exercise these rights, please contact: <strong>codecraftmobileapp@gmail.com</strong>. We will respond within 30 days of receiving your request.</p>
+    <p>You also have the right to lodge a complaint with the relevant data protection authority.</p>
+
+    <h2>9. Children's Data</h2>
+    <p>The App may be used by children under the supervision of a parent or legal guardian. Children's accounts are created and managed exclusively by the parent/guardian. We do not knowingly collect data from children under 16 years of age (per GDPR) without parental or guardian consent.</p>
+    <p>If we learn that we have collected data from a child under 16 without proper consent, we will promptly delete it. If you suspect such a situation, please contact: <strong>codecraftmobileapp@gmail.com</strong></p>
+
+    <h2>10. In-App Purchases</h2>
+    <p>The App offers in-app purchases (Premium subscriptions) powered by Google Play Billing. Transaction data (such as purchase ID and subscription status) is processed by Google in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. We do not have access to your credit card or bank account information.</p>
+
+    <h2>11. Security</h2>
+    <p>We implement appropriate technical and organizational measures to protect personal data, including:</p>
+    <ul>
+        <li>Data encryption in transit (TLS/HTTPS)</li>
+        <li>Data encryption at rest (Firebase)</li>
+        <li>User authentication (Firebase Authentication)</li>
+        <li>Firestore security rules restricting data access</li>
+        <li>API keys stored in a secure secret manager (not in the app's source code)</li>
+    </ul>
+    <p>Despite implementing appropriate safeguards, no method of transmission or storage is 100% secure. We cannot guarantee absolute data security.</p>
+
+    <h2>12. Limitation of Liability</h2>
+    <div class="highlight">
+        <p><strong>The App is provided "as is", without warranties of any kind, either express or implied.</strong></p>
+    </div>
+    <ul>
+        <li>The developer shall not be liable for any direct, indirect, incidental, special, or consequential damages arising from the use or inability to use the App.</li>
+        <li>The developer does not guarantee uninterrupted or error-free operation of the App and reserves the right to temporarily suspend the service for maintenance or updates.</li>
+        <li>The developer is not responsible for content generated by artificial intelligence models. Such content is of an auxiliary and educational nature only.</li>
+        <li>The developer is not responsible for content created and shared by users within the App.</li>
+        <li>The user uses the App at their own risk and responsibility.</li>
+        <li>The developer's total liability to the user, regardless of legal basis, is limited to the amount actually paid by the user for using the App in the 12 months preceding the event.</li>
+    </ul>
+
+    <h2>13. Disclaimer of Warranties</h2>
+    <p>The developer makes no warranties, express or implied, including but not limited to:</p>
+    <ul>
+        <li>Fitness for a particular purpose</li>
+        <li>Accuracy, completeness, or timeliness of educational content (including AI-generated content)</li>
+        <li>Uninterrupted service availability</li>
+        <li>Compatibility with all devices</li>
+    </ul>
+
+    <h2>14. Service Availability</h2>
+    <p>The developer reserves the right to:</p>
+    <ul>
+        <li>Modify, suspend, or discontinue the App (or any part of it) at any time, with or without notice</li>
+        <li>Make changes to features, interface, and offered services</li>
+        <li>Restrict access to certain features under the freemium model</li>
+    </ul>
+    <p>In the event of permanent discontinuation of the App, users will be notified at least 30 days in advance and will be given the opportunity to export their data.</p>
+
+    <h2>15. Intellectual Property</h2>
+    <p>All intellectual property rights to the App (source code, graphic design, logo, the name "Wizzify") belong to the developer. Users retain rights to the content they create within the App (flashcard sets, notes).</p>
+
+    <h2>16. Governing Law and Jurisdiction</h2>
+    <p>This Privacy Policy is governed by the laws of Poland. Any disputes arising from the use of the App shall be resolved by the court having jurisdiction over the developer's registered office, subject to mandatory consumer protection provisions.</p>
+
+    <h2>17. Changes to This Policy</h2>
+    <p>We reserve the right to modify this Privacy Policy at any time. Users will be notified of significant changes through the App or via email. Continued use of the App after changes are made constitutes acceptance of the updated Privacy Policy.</p>
+
+    <h2>18. Contact</h2>
+    <p>For any questions regarding this Privacy Policy, data protection, or the use of the App, please contact:</p>
+    <p><strong>Email:</strong> codecraftmobileapp@gmail.com</p>
+
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('lang-pl').classList.remove('active');
+            document.getElementById('lang-en').classList.remove('active');
+            document.getElementById('btn-pl').classList.remove('active');
+            document.getElementById('btn-en').classList.remove('active');
+            document.getElementById('lang-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+            document.documentElement.lang = lang;
+        }
+    </script>
+
 </body>
 </html>
